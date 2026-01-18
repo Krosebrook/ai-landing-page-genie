@@ -3,7 +3,7 @@ import { useAuth } from '@/components/AuthProvider'
 import { blink } from '@/lib/blink'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { Plus, Sparkles, LogOut, FileText, ExternalLink } from 'lucide-react'
+import { Plus, Sparkles, LogOut, FileText, ExternalLink, BarChart3, LayoutTemplate } from 'lucide-react'
 import type { LandingPage, Subscription } from '@/types'
 import { useNavigate } from 'react-router-dom'
 
@@ -84,6 +84,10 @@ export function Dashboard() {
             <h1 className="text-2xl font-bold">Landing Page Genie</h1>
           </div>
           <div className="flex items-center gap-4">
+            <Button variant="ghost" size="sm" onClick={() => navigate('/templates')}>
+              <LayoutTemplate className="w-4 h-4 mr-2" />
+              Templates
+            </Button>
             <div className="text-sm">
               <span className="text-muted-foreground">Plan: </span>
               <span className="font-medium capitalize">{subscription?.plan}</span>
@@ -183,6 +187,13 @@ export function Dashboard() {
                       onClick={() => navigate(`/edit/${page.id}`)}
                     >
                       Edit
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => navigate(`/analytics/${page.id}`)}
+                    >
+                      <BarChart3 className="w-4 h-4" />
                     </Button>
                     <Button 
                       variant="outline" 
