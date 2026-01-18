@@ -77,3 +77,97 @@ export interface GeneratedContent {
   }>
   formFields: FormField[]
 }
+
+// Analytics types
+export interface AnalyticsEvent {
+  id: string
+  landingPageId: string
+  sessionId: string
+  visitorId?: string
+  eventType: 'pageview' | 'click' | 'form_submit' | 'scroll'
+  timestamp: string
+  pageUrl?: string
+  elementId?: string
+  elementText?: string
+  scrollDepth?: number
+  referrer?: string
+  utmSource?: string
+  utmMedium?: string
+  utmCampaign?: string
+  deviceType?: string
+  browser?: string
+  country?: string
+  createdAt: string
+}
+
+export interface AnalyticsSession {
+  id: string
+  landingPageId: string
+  visitorId: string
+  sessionId: string
+  firstSeen: string
+  lastSeen: string
+  pageViews: number
+  conversions: number
+  referrer?: string
+  utmSource?: string
+  channel?: string
+  deviceType?: string
+  country?: string
+  createdAt: string
+}
+
+export interface AnalyticsSummary {
+  pageViews: number
+  uniqueVisitors: number
+  conversions: number
+  conversionRate: number
+  bounceRate?: number
+  avgSessionDuration?: number
+}
+
+export interface AnalyticsMetric {
+  current: number
+  previous: number
+  change: number
+}
+
+export interface TrafficSource {
+  source: string
+  sessions: number
+  conversions: number
+  conversionRate: number
+}
+
+// Template types
+export interface Template {
+  id: string
+  creatorId: string
+  name: string
+  slug: string
+  description: string
+  category: 'saas' | 'ecommerce' | 'realestate' | 'events' | 'education' | 'healthcare' | 'finance'
+  style: 'modern' | 'bold' | 'minimal' | 'corporate' | 'creative'
+  useCase: 'lead_gen' | 'product_launch' | 'webinar' | 'app_download' | 'newsletter'
+  previewImage: string
+  screenshots?: string[]
+  demoUrl?: string
+  tags: string[]
+  price: number
+  isPaid: number
+  isApproved: number
+  downloads: number
+  rating: number
+  reviewCount: number
+  templateData?: string // JSON stringified template structure
+  createdAt: string
+  updatedAt: string
+}
+
+export interface TemplateCategory {
+  id: string
+  name: string
+  slug: string
+  icon?: string
+  count: number
+}

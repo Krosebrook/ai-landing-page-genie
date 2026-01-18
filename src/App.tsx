@@ -5,6 +5,8 @@ import { Dashboard } from '@/pages/Dashboard'
 import { Generator } from '@/pages/Generator'
 import { Editor } from '@/pages/Editor'
 import { Preview } from '@/pages/Preview'
+import { Analytics } from '@/pages/Analytics'
+import { Templates } from '@/pages/Templates'
 import { Toaster } from '@/components/ui/sonner'
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -56,6 +58,22 @@ function App() {
             }
           />
           <Route path="/preview/:id" element={<Preview />} />
+          <Route
+            path="/analytics/:id"
+            element={
+              <ProtectedRoute>
+                <Analytics />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/templates"
+            element={
+              <ProtectedRoute>
+                <Templates />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
         <Toaster />
       </AuthProvider>
