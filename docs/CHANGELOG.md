@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added - January 18, 2026
+
+#### Analytics Dashboard (Foundation) - v1.1.0-alpha
+- Added Analytics page component with metrics overview
+- Implemented key metrics display: Page Views, Unique Visitors, Conversions, Conversion Rate
+- Created traffic sources breakdown with conversion tracking
+- Added engagement metrics tab (placeholder for future implementation)
+- Integrated date range selector (7d/30d/90d)
+- Added analytics button to landing page cards in dashboard
+- Created TypeScript types for analytics events, sessions, and summaries
+- Note: Currently displays mock data; backend tracking integration pending
+
+#### Template Library (Foundation) - v1.2.0-alpha  
+- Built template browser with grid layout
+- Added 8 sample templates across categories (SaaS, E-commerce, Real Estate, Events, Education, Healthcare)
+- Implemented category filtering and search functionality
+- Created template preview cards with ratings and download counts
+- Added one-click template import to create new landing pages
+- Integrated Templates link in dashboard header
+- Created TypeScript types for templates and categories
+- Added sample template data with Unsplash preview images
+
+#### Documentation
+- Updated README with feature descriptions and tech stack
+- Created comprehensive usage guide for Analytics and Templates
+- Maintained existing feature documentation in `/docs` folder
+
 ### Planned for Q1 2025
 
 #### Analytics Dashboard (v1.1.0) - Target: Week 2, January 2025
