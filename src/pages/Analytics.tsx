@@ -304,10 +304,6 @@ interface MetricCardProps {
 }
 
 function MetricCard({ title, value, icon: Icon, formatter, change }: MetricCardProps) {
-  const formatPercent = (num: number): string => {
-    return `${num.toFixed(1)}%`
-  }
-
   return (
     <Card className="p-6">
       <div className="flex items-center justify-between mb-2">
@@ -321,12 +317,12 @@ function MetricCard({ title, value, icon: Icon, formatter, change }: MetricCardP
             {change > 0 ? (
               <>
                 <TrendingUp className="w-4 h-4 text-green-500" />
-                <span className="text-green-500">+{formatPercent(change)}</span>
+                <span className="text-green-500">+{change.toFixed(1)}%</span>
               </>
             ) : change < 0 ? (
               <>
                 <TrendingDown className="w-4 h-4 text-red-500" />
-                <span className="text-red-500">{formatPercent(change)}</span>
+                <span className="text-red-500">{change.toFixed(1)}%</span>
               </>
             ) : (
               <span className="text-muted-foreground">No change</span>

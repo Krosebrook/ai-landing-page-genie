@@ -32,7 +32,7 @@ export function Templates() {
       setLoading(true)
 
       // Load templates from database
-      const filters: any = { isApproved: 1 }
+      const filters: Record<string, string | number> = { isApproved: 1 }
       if (selectedCategory !== 'all') {
         filters.category = selectedCategory
       }
@@ -64,8 +64,9 @@ export function Templates() {
         title: `${template.name} - Copy`,
         offerDescription: template.description,
         status: 'draft',
-        // Additional template data would be applied here
         generatedCopy: template.description
+        // TODO: Parse and apply template.templateData to properly reconstruct
+        // the template's design, sections, and content structure
       })
 
       // Track template download

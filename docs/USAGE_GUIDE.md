@@ -124,7 +124,7 @@ A: Yes! Import as many templates as you want and customize each one.
 A: Add UTM parameters to your links (e.g., `?utm_source=facebook&utm_campaign=summer_sale`)
 
 **Q: Can I export my analytics data?**  
-A: Yes, use the Export button in the Analytics dashboard to download CSV reports.
+A: Export functionality is planned for a future release. Currently, you can view all metrics in the dashboard.
 
 **Q: Are templates free?**  
 A: Currently, all templates in the library are free to use. Premium templates may be added in the future.
